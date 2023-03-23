@@ -49,7 +49,7 @@ class Cart extends StatelessWidget {
             child: Column(
               children: [
                 ListTile(
-                  leading: Image.asset('asset/greendress.jpg'),
+                  leading: Image.asset('asset/pinkshirt.jpg'),
                   title: Text("Pink T-Shirt"),
                   subtitle: Text("Size: L\nQuantity: 1"),
                 ),
