@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_search_bar/easy_search_bar.dart';
+import 'package:fashiontonic/productDisplay.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -64,6 +67,11 @@ class LandingPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        title: Center(
+            child: Text("Fashiontonic",
+                style: TextStyle(
+                  color: Colors.black,
+                ))),
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         leading: IconButton(
           color: Colors.black,
@@ -102,6 +110,7 @@ class LandingPage extends StatelessWidget {
             child: CarouselSlider(
               options: CarouselOptions(
                 aspectRatio: 2.0,
+                viewportFraction: 0.9,
                 enlargeCenterPage: true,
                 scrollDirection: Axis.vertical,
                 autoPlay: true,
@@ -110,39 +119,117 @@ class LandingPage extends StatelessWidget {
             ),
           ),
           Container(
+              //margin: EdgeInsets.all(50),
+              height: 50,
               child: CarouselSlider(
-            options: CarouselOptions(
-              disableCenter: true,
-            ),
-            items: list
-                .map((item) => Container(
-                      child: Text(item.toString()),
-                      color: Colors.green,
-                    ))
-                .toList(),
-          )),
-          Row(
+                options: CarouselOptions(
+                  disableCenter: true,
+                  viewportFraction: 0.4,
+                  //itemMargin: EdgeInsets.all(10),
+                ),
+                items: list
+                    .map((item) => Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: Color.fromARGB(255, 0, 0, 0)),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            //padding: EdgeInsets.all(10),
+                            //height: 10,
+
+                            child: Center(child: Text(item.toString())),
+                          ),
+                        ))
+                    .toList(),
+              )),
+          Column(
             children: [
-              Card(
-                child: Column(
-                  children: [
-                    SvgPicture.asset("asset/avatar.svg",
-                        height: 100, width: 50),
-                    Text("t shirt"),
-                    Text("price")
-                  ],
-                ),
+              GridView.count(
+                crossAxisCount: 2,
+                physics:
+                    NeverScrollableScrollPhysics(), // to disable GridView's scrolling
+                shrinkWrap: true,
+                //mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Card(
+                      child: Column(
+                        children: [
+                          SvgPicture.asset("asset/avatar.svg",
+                              height: 100, width: 50),
+                          Text("t shirt"),
+                          Text("price")
+                        ],
+                      ),
+                    ),
+                  ),
+                  //SizedBox(width: MediaQuery.of(context).size.width * 0.4),
+                  Card(
+                    child: Column(
+                      children: [
+                        SvgPicture.asset("asset/avatar.svg",
+                            height: 100, width: 50),
+                        Text("t shirt"),
+                        Text("price")
+                      ],
+                    ),
+                  ),
+                  Card(
+                    child: Column(
+                      children: [
+                        SvgPicture.asset("asset/avatar.svg",
+                            height: 100, width: 50),
+                        Text("t shirt"),
+                        Text("price")
+                      ],
+                    ),
+                  ),
+                  Card(
+                    color: Colors.amber,
+                    child: Column(
+                      children: [
+                        SvgPicture.asset("asset/avatar.svg",
+                            height: 100, width: 50),
+                        Text("t shirt"),
+                        Text("price"),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Display()),
+                            );
+                          },
+                          child: null,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Card(
+                    child: Column(
+                      children: [
+                        SvgPicture.asset("asset/avatar.svg",
+                            height: 100, width: 50),
+                        Text("t shirt"),
+                        Text("price")
+                      ],
+                    ),
+                  ),
+                  Card(
+                    child: Column(
+                      children: [
+                        SvgPicture.asset("asset/avatar.svg",
+                            height: 100, width: 50),
+                        Text("t shirt"),
+                        Text("price")
+                      ],
+                    ),
+                  )
+                ],
               ),
-              Card(
-                child: Column(
-                  children: [
-                    SvgPicture.asset("asset/avatar.svg",
-                        height: 100, width: 50),
-                    Text("t shirt"),
-                    Text("price")
-                  ],
-                ),
-              )
             ],
           )
         ],
