@@ -1,16 +1,27 @@
-# fashiontonic
+# Fashiontonic
 
-A new Flutter project.
+GDSC SRM - Technical round one task.
 
-## Getting Started
+I tried my best to recreate the UI of the given app in the GDSC recuritment form.
+There are slight customization but the UI is interactive to some extent.
 
-This project is a starting point for a Flutter application.
+Here i will attach the Drive link for the app screenshots: https://drive.google.com/drive/folders/1iYYzK1WFQaRQwQASAgk9kVONk_GmDsYk?usp=sharing
 
-A few resources to get you started if this is your first Flutter project:
+Also these are the screenshots/video attached:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Video:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://user-images.githubusercontent.com/93426509/227245689-15706533-9271-4260-bd18-71b8de645048.mp4
+
+
+Page 1:![VideoCapture_20230323-202006](https://user-images.githubusercontent.com/93426509/227244735-6b14a539-9bb7-4c7b-819b-542feefe5033.jpg)
+![VideoCapture_20230323-202020](https://user-images.githubusercontent.com/93426509/227244816-7056e876-b2a6-4278-b47b-d95077354708.jpg)
+
+
+Page 2:![VideoCapture_20230323-202029](https://user-images.githubusercontent.com/93426509/227244785-8ea72a6d-017a-4592-a03e-e96f1f6f73e9.jpg)
+
+
+Page 3:
+![VideoCapture_20230323-202046](https://user-images.githubusercontent.com/93426509/227244799-19ffb9d8-57c8-4335-8fb2-2df1637f8498.jpg)
+
+
